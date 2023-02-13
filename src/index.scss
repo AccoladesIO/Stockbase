@@ -1,0 +1,19 @@
+:root{
+  line-height: 1.4;
+
+  font-size: 1.6rem;
+}
+@font-face {
+  font-family: primaryFont;
+  src: url('./assets/TCB_____.TTF');
+}
+@font-face {
+  font-family: secFont;
+  src: url('./assets/TCM_____.TTF');
+}
+svg{
+  height: 100%;
+}
+html{
+  font-size: 62.5%;
+}
