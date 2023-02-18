@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../src/firebase'
+import '../src/assets/Styles.scss'
 
 
 const Dashboard = () => {
@@ -12,7 +13,7 @@ const Dashboard = () => {
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
               // ...
-              console.log("uid", uid)
+              // console.log("uid", uid)
               console.log(user)
             } else {
               // User is signed out
@@ -24,7 +25,10 @@ const Dashboard = () => {
     }, [])
 
   return (
-    <div>Dashboard</div>
+    <section className='dashboard'>
+      <p>Dashboard</p>
+
+    </section>
   )
 }
 
