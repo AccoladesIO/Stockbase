@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../src/firebase'
 import '../src/assets/Styles.scss'
+import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
+import Graph from './components/graph/Graph';
 
 
 const Dashboard = () => {
@@ -26,7 +29,11 @@ const Dashboard = () => {
 
   return (
     <section className='dashboard'>
-      <p>Dashboard</p>
+      <Navbar />
+      <div className="flex">
+        <Sidebar  />
+      <Graph />
+      </div>
 
     </section>
   )
