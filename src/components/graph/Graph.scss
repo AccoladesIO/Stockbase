@@ -1,0 +1,71 @@
+$heroBackground: #5118911b;
+$mainColor: #673AB7;
+
+.graph-section{
+    width: 99%;
+    border-radius: 5px;
+    // box-shadow: 1px 1px 1px #333;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: $heroBackground;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+    @media screen and (max-width: 680px) {
+        width: 100%;
+    }
+    .cards{
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 20px;
+        padding: 10px;
+        margin: 5px;
+        .card{
+            border-radius: 3px;
+            height: 150px;
+        border: 1px solid $mainColor;
+        }
+        .card.grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            border: none;
+            .sub-card{
+                border: 1px solid $mainColor;
+            }
+            @media screen and (max-width: 860px) {
+                grid-template-columns: 1fr 1fr;
+                grid-column: 1/-1;
+            }
+        }
+        @media screen and (max-width: 860px) {
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+        }
+        @media screen and (max-width: 400px) {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+    }
+    .graph, .article{
+        border: 1px solid #b780f56d;
+        border-radius: 10px;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: secFont;
+        padding: 10px;
+    }
+    .graph-grid{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 10px;
+        @media screen and (max-width: 840px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

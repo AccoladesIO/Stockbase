@@ -1,0 +1,69 @@
+$navColor: azure;
+$navFont: primaryFont;
+
+nav{
+    width: 99%;
+    height: 60px;
+    background: $navColor;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 3px;
+    font-family: $navFont;
+    .logo-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        gap: 20px;
+        .icon-wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            color: #333;
+            font-family: primaryFont;
+        }
+        .icon{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    form{
+        width: 100%;
+        input{
+            border: 1px solid #b780f56d;
+            border-radius: 5px;
+            background: lavender;
+            width: 100%;
+        }
+    }
+    .wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        flex-direction: row;
+        gap: 10px;
+        .notification{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+  
+    }
+    .icons{
+        color: #673ab7;
+        background-color: lavender;
+        padding: 5px;
+        text-align: center;
+        font-size: 32px;
+        border-radius: 50%;
+    }
+    .display-info{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #b780f56d;
+    }
+    }
