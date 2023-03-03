@@ -1,5 +1,6 @@
 import React from 'react'
-import * as Fa from 'react-icons/fa'
+import {AiOutlineBars, AiOutlineBell} from 'react-icons/ai'
+// import * as Pa from 'react-icons/fa'
 import './Navbar.scss'
 
 
@@ -8,7 +9,7 @@ const Navbar = () => {
     <nav>
       <div className="logo-box">
         <div className='icon-wrap'>
-      <Fa.FaBars className='icons' />
+      <AiOutlineBars className='icons big' />
         <img src='../../../src/assets/logo.svg' alt="" className='icon'/>
         <p>Stockbase</p>
         </div>
@@ -22,7 +23,7 @@ const Navbar = () => {
         </div>
         {/* notification button */}
         <div className="notification">
-          <Fa.FaBell  className='icons'/>
+          <AiOutlineBell  className='icons'/>
         </div>
         </div>
       </div>
