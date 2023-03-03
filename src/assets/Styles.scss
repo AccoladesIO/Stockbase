@@ -1,7 +1,9 @@
-$heroBackground: #e5f4ff;
+$heroBackground: azure;
 $mainColor: #673AB7;
 $subColor: #9e9e9e;
-    
+    body{
+        background: $heroBackground;
+    }
     .main{
     background: $heroBackground;
     width: 100%;
@@ -9,6 +11,25 @@ $subColor: #9e9e9e;
     display: flex;
     justify-content: center;
     align-items: center;
+    }
+    .dashboard{
+        background: $heroBackground;
+        max-width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        .flex{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            width: 99%;
+            margin: 0 auto;
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                display: block;
+            }
+        }
     }
     .section{
         width: 300px;
@@ -67,4 +88,8 @@ $subColor: #9e9e9e;
         font-size: 14px;
         display: flex;
         width: 100%;
+    }
+    .error{
+        font-size: 14px;
+        color: rgb(255, 4, 4);
     }

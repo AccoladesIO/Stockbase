@@ -9,6 +9,7 @@ const Signup = () => {
  
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('')
  
     const onSubmit = async (e: React.FormEvent) => {
       e.preventDefault()
@@ -24,6 +25,7 @@ const Signup = () => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            setError(errorCode)
             console.log(errorCode, errorMessage);
             // ..
         });
@@ -72,7 +74,9 @@ const Signup = () => {
                             Sign up                                
                         </button>
                         </div>
-                                                                     
+                        <p className="error">
+                                {error}
+                                </p>                                                                     
                     </form>
                    
                     <p className='text-sm color'>

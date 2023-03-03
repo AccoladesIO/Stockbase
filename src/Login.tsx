@@ -7,6 +7,7 @@ import './assets/Styles.scss'
 const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
+    const [error, setError] = useState('')
     const [password, setPassword] = useState('');
        
     const onLogin = (e: React.FormEvent) => {
@@ -16,11 +17,13 @@ const Login = () => {
             // Signed in
             const user = userCredential.user;
             navigate("/dashboard")
+            alert(`${user.email} is signed in`)
             console.log(user);
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            setError(errorCode)
             console.log(errorCode, errorMessage)
         });
        
@@ -33,7 +36,8 @@ const Login = () => {
                     <div>                                            
                         <h3 className='heading-sub'> <img src='../src/assets/logo.svg' alt="" />  Login to Stockbase </h3>                       
                                                        
-                        <form className='form-control'>                                              
+                        <form className='form-control'>
+                            
                             <div className='indent'>
                                 <label htmlFor="email-address">
                                     Email address
@@ -68,7 +72,10 @@ const Login = () => {
                                 >      
                                     Login                                                                  
                                 </button>
-                            </div>                               
+                            </div>          
+                            <p className="error">
+                                {error}
+                                </p>                                                                   
                         </form>
                        
                         <p className="text-sm color">
