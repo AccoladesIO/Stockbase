@@ -13,7 +13,10 @@ $padding: 2rem;
     padding: 0;
     box-sizing: border-box;    
 }
-
+.App{
+    max-width: 100%;
+    width: 100vw;
+}
 html{
     font-size: 62.65%;
 }
