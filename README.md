@@ -1,2 +1,2 @@
-# Stockbase..
+# Stockbase...
 
